@@ -153,3 +153,55 @@ span.tooltip span {
 span.tooltip span::after {
   content: "";
 }
+button:hover {
+  background-color: purple;
+}
+
+a:visited, a:focus {
+  color: white;
+}
+
+.hero {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  z-index: 10; /* above other content */
+}
+
+article p:first-of-type::first-letter {
+  font-size: 3em;
+  font-weight: bold;
+  float: left;
+  margin-right: 0.1em;
+  line-height: 1;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip span {
+  visibility: hidden;
+  width: 120px;
+  color: #fff; /* Text color */
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%;
+  margin-left: -60px; 
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip span::after {
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
